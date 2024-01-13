@@ -21,7 +21,7 @@ namespace ELibrary.DataAccess.Concrete.EntityFramework
                 var addedEntity = context.Entry(entity);
                 addedEntity.State = EntityState.Added;
                 context.SaveChanges();
-        }
+            }
         }
 
         public void Delete(TEntity entity)
@@ -31,7 +31,7 @@ namespace ELibrary.DataAccess.Concrete.EntityFramework
                 var deletedEntity = context.Entry(entity);
                 deletedEntity.State = EntityState.Deleted;
                 context.SaveChanges();
-        }
+            }
         }
 
         public TEntity Get(Expression<Func<TEntity, bool>> filter)
