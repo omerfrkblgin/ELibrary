@@ -16,9 +16,30 @@ namespace ELibrary.Business.Concrete
         {
             _bookDal = bookDal; 
         }
+
+        public void Add(Book book)
+        {
+            _bookDal.Add(book);
+        }
+
+        public void Delete(Book book)
+        {
+            _bookDal.Delete(book);
+        }
+
         public List<Book> GetAll()
         {
             return _bookDal.GetAll();
+        }
+
+        public List<Book> GetBooksByGenre(int bookId)
+        {
+            return _bookDal.GetAll(p=>p.BookId == bookId);
+        }
+
+        public void Update(Book book)
+        {
+            _bookDal.Update(book);
         }
     }
 }
