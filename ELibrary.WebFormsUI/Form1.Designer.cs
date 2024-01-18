@@ -29,15 +29,29 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.tbxAuthor = new System.Windows.Forms.TextBox();
+            this.tbxBookName = new System.Windows.Forms.TextBox();
+            this.tbxBookGenre = new System.Windows.Forms.TextBox();
+            this.tbxPages = new System.Windows.Forms.TextBox();
+            this.lblAuthor = new System.Windows.Forms.Label();
+            this.lblBookName = new System.Windows.Forms.Label();
+            this.lblBookGenre = new System.Windows.Forms.Label();
+            this.lblPages = new System.Windows.Forms.Label();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.gbxAdd = new System.Windows.Forms.GroupBox();
+            this.gbxUpdate = new System.Windows.Forms.GroupBox();
+            this.lblAuthorUpdate = new System.Windows.Forms.Label();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.tbxAuthorUpdate = new System.Windows.Forms.TextBox();
+            this.lblGenreUpdate = new System.Windows.Forms.Label();
+            this.tbxBookNameUpdate = new System.Windows.Forms.TextBox();
+            this.lblBookGenreUpdate = new System.Windows.Forms.Label();
+            this.tbxBookGenreUpdate = new System.Windows.Forms.TextBox();
+            this.lblBookNameUpdate = new System.Windows.Forms.Label();
+            this.tbxPagesUpdate = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.gbxAdd.SuspendLayout();
+            this.gbxUpdate.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -50,103 +64,230 @@
             this.dataGridView1.Size = new System.Drawing.Size(1000, 342);
             this.dataGridView1.TabIndex = 0;
             // 
-            // textBox1
+            // tbxAuthor
             // 
-            this.textBox1.Location = new System.Drawing.Point(134, 475);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(149, 22);
-            this.textBox1.TabIndex = 1;
+            this.tbxAuthor.Location = new System.Drawing.Point(139, 31);
+            this.tbxAuthor.Name = "tbxAuthor";
+            this.tbxAuthor.Size = new System.Drawing.Size(149, 22);
+            this.tbxAuthor.TabIndex = 1;
             // 
-            // textBox2
+            // tbxBookName
             // 
-            this.textBox2.Location = new System.Drawing.Point(134, 523);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(149, 22);
-            this.textBox2.TabIndex = 1;
+            this.tbxBookName.Location = new System.Drawing.Point(139, 79);
+            this.tbxBookName.Name = "tbxBookName";
+            this.tbxBookName.Size = new System.Drawing.Size(149, 22);
+            this.tbxBookName.TabIndex = 1;
             // 
-            // textBox3
+            // tbxBookGenre
             // 
-            this.textBox3.Location = new System.Drawing.Point(134, 567);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(149, 22);
-            this.textBox3.TabIndex = 1;
+            this.tbxBookGenre.Location = new System.Drawing.Point(139, 123);
+            this.tbxBookGenre.Name = "tbxBookGenre";
+            this.tbxBookGenre.Size = new System.Drawing.Size(149, 22);
+            this.tbxBookGenre.TabIndex = 1;
             // 
-            // textBox4
+            // tbxPages
             // 
-            this.textBox4.Location = new System.Drawing.Point(134, 612);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(149, 22);
-            this.textBox4.TabIndex = 1;
+            this.tbxPages.Location = new System.Drawing.Point(139, 168);
+            this.tbxPages.Name = "tbxPages";
+            this.tbxPages.Size = new System.Drawing.Size(149, 22);
+            this.tbxPages.TabIndex = 1;
             // 
-            // label1
+            // lblAuthor
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(59, 478);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
+            this.lblAuthor.AutoSize = true;
+            this.lblAuthor.Location = new System.Drawing.Point(83, 34);
+            this.lblAuthor.Name = "lblAuthor";
+            this.lblAuthor.Size = new System.Drawing.Size(51, 16);
+            this.lblAuthor.TabIndex = 2;
+            this.lblAuthor.Text = "Author :";
             // 
-            // label2
+            // lblBookName
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(59, 526);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 16);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "label1";
+            this.lblBookName.AutoSize = true;
+            this.lblBookName.Location = new System.Drawing.Point(48, 82);
+            this.lblBookName.Name = "lblBookName";
+            this.lblBookName.Size = new System.Drawing.Size(85, 16);
+            this.lblBookName.TabIndex = 2;
+            this.lblBookName.Text = "Book Name :";
             // 
-            // label3
+            // lblBookGenre
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(59, 570);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 16);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "label1";
+            this.lblBookGenre.AutoSize = true;
+            this.lblBookGenre.Location = new System.Drawing.Point(83, 126);
+            this.lblBookGenre.Name = "lblBookGenre";
+            this.lblBookGenre.Size = new System.Drawing.Size(50, 16);
+            this.lblBookGenre.TabIndex = 2;
+            this.lblBookGenre.Text = "Genre :";
             // 
-            // label4
+            // lblPages
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(59, 615);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 16);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "label1";
+            this.lblPages.AutoSize = true;
+            this.lblPages.Location = new System.Drawing.Point(80, 171);
+            this.lblPages.Name = "lblPages";
+            this.lblPages.Size = new System.Drawing.Size(53, 16);
+            this.lblPages.TabIndex = 2;
+            this.lblPages.Text = "Pages :";
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(196, 219);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(92, 34);
+            this.btnAdd.TabIndex = 3;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            // 
+            // gbxAdd
+            // 
+            this.gbxAdd.Controls.Add(this.lblAuthor);
+            this.gbxAdd.Controls.Add(this.btnAdd);
+            this.gbxAdd.Controls.Add(this.tbxAuthor);
+            this.gbxAdd.Controls.Add(this.lblPages);
+            this.gbxAdd.Controls.Add(this.tbxBookName);
+            this.gbxAdd.Controls.Add(this.lblBookGenre);
+            this.gbxAdd.Controls.Add(this.tbxBookGenre);
+            this.gbxAdd.Controls.Add(this.lblBookName);
+            this.gbxAdd.Controls.Add(this.tbxPages);
+            this.gbxAdd.Location = new System.Drawing.Point(13, 429);
+            this.gbxAdd.Name = "gbxAdd";
+            this.gbxAdd.Size = new System.Drawing.Size(321, 265);
+            this.gbxAdd.TabIndex = 4;
+            this.gbxAdd.TabStop = false;
+            this.gbxAdd.Text = "Book Adding";
+            // 
+            // gbxUpdate
+            // 
+            this.gbxUpdate.Controls.Add(this.lblAuthorUpdate);
+            this.gbxUpdate.Controls.Add(this.btnUpdate);
+            this.gbxUpdate.Controls.Add(this.tbxAuthorUpdate);
+            this.gbxUpdate.Controls.Add(this.lblGenreUpdate);
+            this.gbxUpdate.Controls.Add(this.tbxBookNameUpdate);
+            this.gbxUpdate.Controls.Add(this.lblBookGenreUpdate);
+            this.gbxUpdate.Controls.Add(this.tbxBookGenreUpdate);
+            this.gbxUpdate.Controls.Add(this.lblBookNameUpdate);
+            this.gbxUpdate.Controls.Add(this.tbxPagesUpdate);
+            this.gbxUpdate.Location = new System.Drawing.Point(692, 429);
+            this.gbxUpdate.Name = "gbxUpdate";
+            this.gbxUpdate.Size = new System.Drawing.Size(321, 265);
+            this.gbxUpdate.TabIndex = 4;
+            this.gbxUpdate.TabStop = false;
+            this.gbxUpdate.Text = "Book Updating";
+            // 
+            // lblAuthorUpdate
+            // 
+            this.lblAuthorUpdate.AutoSize = true;
+            this.lblAuthorUpdate.Location = new System.Drawing.Point(83, 34);
+            this.lblAuthorUpdate.Name = "lblAuthorUpdate";
+            this.lblAuthorUpdate.Size = new System.Drawing.Size(51, 16);
+            this.lblAuthorUpdate.TabIndex = 2;
+            this.lblAuthorUpdate.Text = "Author :";
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(196, 219);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(92, 34);
+            this.btnUpdate.TabIndex = 3;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            // 
+            // tbxAuthorUpdate
+            // 
+            this.tbxAuthorUpdate.Location = new System.Drawing.Point(139, 31);
+            this.tbxAuthorUpdate.Name = "tbxAuthorUpdate";
+            this.tbxAuthorUpdate.Size = new System.Drawing.Size(149, 22);
+            this.tbxAuthorUpdate.TabIndex = 1;
+            // 
+            // lblGenreUpdate
+            // 
+            this.lblGenreUpdate.AutoSize = true;
+            this.lblGenreUpdate.Location = new System.Drawing.Point(80, 171);
+            this.lblGenreUpdate.Name = "lblGenreUpdate";
+            this.lblGenreUpdate.Size = new System.Drawing.Size(53, 16);
+            this.lblGenreUpdate.TabIndex = 2;
+            this.lblGenreUpdate.Text = "Pages :";
+            // 
+            // tbxBookNameUpdate
+            // 
+            this.tbxBookNameUpdate.Location = new System.Drawing.Point(139, 79);
+            this.tbxBookNameUpdate.Name = "tbxBookNameUpdate";
+            this.tbxBookNameUpdate.Size = new System.Drawing.Size(149, 22);
+            this.tbxBookNameUpdate.TabIndex = 1;
+            // 
+            // lblBookGenreUpdate
+            // 
+            this.lblBookGenreUpdate.AutoSize = true;
+            this.lblBookGenreUpdate.Location = new System.Drawing.Point(83, 126);
+            this.lblBookGenreUpdate.Name = "lblBookGenreUpdate";
+            this.lblBookGenreUpdate.Size = new System.Drawing.Size(50, 16);
+            this.lblBookGenreUpdate.TabIndex = 2;
+            this.lblBookGenreUpdate.Text = "Genre :";
+            // 
+            // tbxBookGenreUpdate
+            // 
+            this.tbxBookGenreUpdate.Location = new System.Drawing.Point(139, 123);
+            this.tbxBookGenreUpdate.Name = "tbxBookGenreUpdate";
+            this.tbxBookGenreUpdate.Size = new System.Drawing.Size(149, 22);
+            this.tbxBookGenreUpdate.TabIndex = 1;
+            // 
+            // lblBookNameUpdate
+            // 
+            this.lblBookNameUpdate.AutoSize = true;
+            this.lblBookNameUpdate.Location = new System.Drawing.Point(48, 82);
+            this.lblBookNameUpdate.Name = "lblBookNameUpdate";
+            this.lblBookNameUpdate.Size = new System.Drawing.Size(85, 16);
+            this.lblBookNameUpdate.TabIndex = 2;
+            this.lblBookNameUpdate.Text = "Book Name :";
+            // 
+            // tbxPagesUpdate
+            // 
+            this.tbxPagesUpdate.Location = new System.Drawing.Point(139, 168);
+            this.tbxPagesUpdate.Name = "tbxPagesUpdate";
+            this.tbxPagesUpdate.Size = new System.Drawing.Size(149, 22);
+            this.tbxPagesUpdate.TabIndex = 1;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1025, 721);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.gbxUpdate);
+            this.Controls.Add(this.gbxAdd);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.gbxAdd.ResumeLayout(false);
+            this.gbxAdd.PerformLayout();
+            this.gbxUpdate.ResumeLayout(false);
+            this.gbxUpdate.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox tbxAuthor;
+        private System.Windows.Forms.TextBox tbxBookName;
+        private System.Windows.Forms.TextBox tbxBookGenre;
+        private System.Windows.Forms.TextBox tbxPages;
+        private System.Windows.Forms.Label lblAuthor;
+        private System.Windows.Forms.Label lblBookName;
+        private System.Windows.Forms.Label lblBookGenre;
+        private System.Windows.Forms.Label lblPages;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.GroupBox gbxAdd;
+        private System.Windows.Forms.GroupBox gbxUpdate;
+        private System.Windows.Forms.Label lblAuthorUpdate;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.TextBox tbxAuthorUpdate;
+        private System.Windows.Forms.Label lblGenreUpdate;
+        private System.Windows.Forms.TextBox tbxBookNameUpdate;
+        private System.Windows.Forms.Label lblBookGenreUpdate;
+        private System.Windows.Forms.TextBox tbxBookGenreUpdate;
+        private System.Windows.Forms.Label lblBookNameUpdate;
+        private System.Windows.Forms.TextBox tbxPagesUpdate;
     }
 }
 
